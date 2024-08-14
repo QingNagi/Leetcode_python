@@ -12,7 +12,8 @@ class Solution:
         while temp is not None:
             stack.append(temp.val)
             temp = temp.next
-        while len(stack) != 0  and head is not None:
+        n = len(stack)//2
+        while len(stack) > n and head is not None:
             if stack.pop() != head.val:
                 return False
             head = head.next
