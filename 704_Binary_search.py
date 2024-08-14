@@ -4,7 +4,7 @@ class Solution:
             return -1
         left, right = 0, len(nums) - 1
         while(left <= right):
-            mid = (left + right) // 2
+            mid = left + ((right - left) >> 1)
             if nums[mid] == target:
                 return mid
             elif nums[mid] > target:
