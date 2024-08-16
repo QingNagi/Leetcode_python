@@ -1,8 +1,6 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        need=collections.defaultdict(int)
-        for c in t:
-            need[c]+=1
+        need = Counter(t)
         needCnt=len(t)
         i=0
         res=(0,float('inf'))
